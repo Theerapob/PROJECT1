@@ -18,24 +18,26 @@ pip install flask flask-socketio flask-cors flask-sqlalchemy werkzeug selenium
 ```
 
 ## การรัน Backend App
-เปิดเซิร์ฟเวอร์ (ต้องเข้าถึง index.html ได้ที่ http://localhost:5000)
 ```bash
 python app.py
 ```
-
+# เปิด เซิฟตลอด
 ## รันชุดทดสอบ
 ### 1) Backend
 ```bash
 python tests/test_backend.py
 ```
+# pip install pytest requests pytest-html
 
 ### 2) Frontend
 > ต้องมีเว็บรันอยู่ (ดูหัวข้อ "การรัน Backend App")
 ```bash
 # ใช้พอร์ต/URL เองได้ผ่าน env SMART_VILLAGE_URL เช่น http://127.0.0.1:5000
-SMART_VILLAGE_URL=http://localhost:5000 python tests/test_frontend.py
+SMART_VILLAGE_URL=http://localhost:5000 
+python tests/test_frontend.py
 # (ค่าเริ่มต้น HEADLESS=1 ถ้าอยากดูเบราเซอร์จริงๆให้ตั้ง HEADLESS=0)
-HEADLESS=0 SMART_VILLAGE_URL=http://localhost:5000 python tests/test_frontend.py
+HEADLESS=0 SMART_VILLAGE_URL=http://localhost:5000 
+python tests/test_frontend.py
 ```
 
 ## รายการฟีเจอร์ที่ครอบคลุม
